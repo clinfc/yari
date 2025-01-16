@@ -303,10 +303,7 @@ jobs:
           yarn build:ssr
           yarn tool:legacy build-robots-txt
 
-          yarn rari content sync-translated-content
-          yarn rari git-history
-
-          yarn rari build --all --issues client/build/issues.json --templ-stats
+          # yarn rari content sync-translated-content
 
           du -sh client/build
 
