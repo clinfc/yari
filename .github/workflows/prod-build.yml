@@ -318,13 +318,13 @@ jobs:
           # Sort DE search index by en-US popularity.
           # node scripts/reorder-search-index.mjs client/build/en-us/search-index.json client/build/de/search-index.json
 
-      - name: Update search index
-        # if: ${{ ! vars.SKIP_BUILD }}
-        env:
-          DEPLOYER_ELASTICSEARCH_URL: ${{ secrets.DEPLOYER_PROD_ELASTICSEARCH_URL }}
-        run: |
-          cd deployer
-          poetry run deployer search-index ../client/build
+      # - name: Update search index
+      #   # if: ${{ ! vars.SKIP_BUILD }}
+      #   env:
+      #     DEPLOYER_ELASTICSEARCH_URL: ${{ secrets.DEPLOYER_PROD_ELASTICSEARCH_URL }}
+      #   run: |
+      #     cd deployer
+      #     poetry run deployer search-index ../client/build
 
       # - name: Authenticate with GCP
       #   if: ${{ ! vars.SKIP_BUILD }}
